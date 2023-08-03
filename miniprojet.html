@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mini-projet</title>
+	<meta charset="utf-8"/>
+</head>
+<body>
+	<style>
+		.required-elem{
+      border-color:#00FF00;
+}
+	</style>
+	<h1> Votre commande </h1><br>
+	<form id="hi">
+	 Entrée 
+	<select >
+		<option name="aucun" value="aucun"  selected>aucun</option>
+		<option >salade</option>
+	</select>
+		Pour <input type="number" name="per"   value="0" selected  min="0"  max="9"><br><br>
+		Plat
+		<select name="farm" id="farm" required>
+      <option value="aucun"  >aucun</option>
+       <option value="burger" price="5000">burger</option>
+      <option  value="pizza"  price="7000">pizza tomate mozzarella </option>
+</select>
+<label for="pour">Pour</label>
+<input type="number" value="0" name="pour" id="pour"  min="0"  max="9" pattern="[0-9] {1}" />
+		<br><br>
+		<div class="block-box">
+ dessert
+		<select  >
+		<option name="aucun" value="aucun" selected>aucun</option>
+			<option value="fruit" price="2000" class="block-box" > fruits mixés au yaourt</option>
+			<option value="mini" price="2500" >mini crépes</option>
+	</select>
+		Pour <input type="number" value="0"    name="pour" selected  min="0"  max="9">
+	</form><br><br>
+</div>
+		 Prix <input type="text" id="prix"><br><br>
+		 Entrer votre adresse<br>  
+		 <form class="validation-form" action="traitement.php" method="POST" id="form" >
+		 <input type="email" id="addr"  name="pour" required autocomplete="off" autocorrect="false" spellcheck="true" required class="form-control normal_elem " value="">
+        <br><br>
+
+<button id="btn" type="submit" onclick="pri()">Commander</button>
+<br>
+<span id="pp"></span>
+    </form>
+    <script src="files.js"></script>
+</body>
+</html>
